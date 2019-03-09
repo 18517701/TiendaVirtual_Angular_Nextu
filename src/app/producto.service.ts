@@ -6,6 +6,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductoService {
+subproducto: any[]=[];
 
   constructor(private http: Http) { }
 

@@ -28,9 +28,6 @@ export class LoginComponent {
           this.router.navigate(['/principal']);
         }
       }
-      
-
-      console.log(this.validacion);
 
     }
   );

@@ -1,3 +1,35 @@
-<p>
-  carrito works!
-</p>
+<div class="container">
+  <app-navbar></app-navbar>
+  <br>
+  <div class="row contenedor container">
+    <div class="col-sm-6">
+      <div class="row" *ngFor="let carro of car">
+          <div class="col-sm-6">
+              <div class="card">
+                <img class="card-img-top" [src]="'../../assets/imagenesBase/'+ carro.imagen" alt="Card image cap" width="10%">
+                <div class="card-body">
+                  <p class="card-text"> <b>Subtotal: </b> Q.{{carro.subtotal}}.00</p>
+                </div>
+              </div>
+              </div>
+              <div class="col-sm-6">
+                <p>{{carro.nombre| uppercase}}</p>
+                <p><b>Unidades: </b> {{carro.unidad}}</p>
+              </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <h1> <b>Total: </b> Q.{{total}}.00 </h1>
+      <div class="row">
+        <div class="col-sm-3">
+            <button class="btn btn-danger btn-lg" (click)="cancelar()">Cancelar</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success btn-lg" (click)="pagar()">Pagar</button>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>

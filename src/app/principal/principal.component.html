@@ -19,14 +19,12 @@
                 <div  class="card">
                     <img class="card-img-top" [src]="'../../assets/imagenesBase/' + producto.imagen" alt="Card image cap" >
                     <div class="card-body">
-                      <h5 class="card-title">{{producto.nombre}}</h5>
+                      <h5 class="card-title">{{producto.nombre | uppercase}}</h5>
                       <p class="card-text"><b>Precio:</b> {{producto.precio}}</p>
                       <p class="card-text"><b>Unidades disponibles:</b> {{producto.unidades}}</p>
-                      <a class="btn btn-primary">Ver Mas</a>
-                      <a class="btn btn-warning">Añadir</a>
-                      
-                        <option value="1">1</option>
-      
+                      <button class="btn btn-primary btn-sm" (click)="vermas(producto.nombre)" >Ver Mas</button>
+                      <button class="btn btn-warning btn-sm" (click)="agregar(producto.imagen,producto.nombre,producto.precio, uni.value)">Añadir</button>
+                      <input class="col-sm-4" type="number" value="1" min="1" [max]="producto.unidades" #uni>
                     </div>
                   </div> 
                 </div>

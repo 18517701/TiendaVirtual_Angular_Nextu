@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CarritoService} from'../carrito.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+   
+  constructor(private carro: CarritoService) { }
 
+  invisible(){
+    this.carro.estado = 1;
+  }
+
+  visible(){
+    this.carro.estado = 0;
+  }
   ngOnInit() {
+
   }
 
 }

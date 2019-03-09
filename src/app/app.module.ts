@@ -9,6 +9,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { VermasComponent } from './vermas/vermas.component';
 
 
 
@@ -19,6 +20,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     CarritoComponent,
     LoginComponent,
     NavbarComponent,
+    VermasComponent,
 
   ],
   imports: [

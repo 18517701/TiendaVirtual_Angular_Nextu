@@ -4,11 +4,22 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpModule} from '@angular/http';
+import { PrincipalComponent } from './principal/principal.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrincipalComponent,
+    CarritoComponent,
+    LoginComponent,
+    NavbarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -16,6 +27,7 @@ import {HttpModule} from '@angular/http';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

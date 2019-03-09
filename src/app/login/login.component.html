@@ -1,0 +1,26 @@
+<div id="imagen"></div>
+        <div class="container">
+
+                <form id="formulario" (ngSubmit)="onSubmit(f)" #f="ngForm"  ngNativeValidate >
+                    <div class="text-center">
+                        <label><h3>Inicia Sesión</h3></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre">Corre electronico: </label>
+                        <input type="text" class="form-control" ngModel name="nombre" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+                    </div>
+                    <div class="form-group">
+                            <label for="password">Password: </label>
+                            <input type="password" class="form-control" ngModel name="password" required>
+                    </div>
+                    <div *ngIf="validacion" class="text-danger">
+                       <b>Error al iniciar sesión</b> 
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success"> Validar </button>
+                    </div>
+                  
+                </form>
+            
+            </div>

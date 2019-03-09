@@ -1,0 +1,38 @@
+<div class="container">
+  <app-navbar></app-navbar>
+  <br>
+
+   
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand"><h1>Catálago de productos</h1></a>
+           
+              <form class="form-group  ml-auto">
+                <label for="buscador">¿Qué estás buscando?</label>
+                <input name="buscador"class="form-control mr-sm-2" type="search" placeholder="Busar.." aria-label="Search" (keyup)="buscador(texto.value)" #texto>
+              </form>
+            
+          </nav>
+   
+          <div class="justify-content-start">
+            <div class="horizontal"  >
+            <div *ngFor="let producto of subproducto" class="col-sm-3">
+                <div  class="card">
+                    <img class="card-img-top" [src]="'../../assets/imagenesBase/' + producto.imagen" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">{{producto.nombre}}</h5>
+                      <p class="card-text"><b>Precio:</b> {{producto.precio}}</p>
+                      <p class="card-text"><b>Unidades disponibles:</b> {{producto.unidades}}</p>
+                      <a class="btn btn-primary">Ver Mas</a>
+                      <a class="btn btn-warning">Añadir</a>
+                      
+                        <option value="1">1</option>
+      
+                    </div>
+                  </div> 
+                </div>
+            </div>
+          </div>
+          
+  
+
+</div>
